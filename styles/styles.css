@@ -56,7 +56,7 @@ font-size: 13px;
 line-height: 15px;
 color: #333;
 background-color: #0d202e;
-background: #0d202e url(images/body_bk.png) left top repeat;
+background: #0d202e url(images/bk2.png) left top repeat;
 }
 
 #wrapper{
@@ -68,21 +68,29 @@ margin: 0px 30px;
 text-align: center;
 font-weight: bold;
 }
-#menu{
+.menu{
 text-align: right;
 }
-#menu a{
+.menu a{
 text-decoration: none;
 color: #fff;
 border-left: 1px solid #fff;
 font-weight: bold;
 letter-spacing: 0.1px;
 }
-#menu a:hover{
+.project .menu a{
+font-weight: normal;
+}
+
+.project .menu a:hover{
+color:#053858;
+}
+
+.menu a:hover{
 background: none;
 color: #E2610A;}
 	
-	#menu a:first-child{
+	.menu a:first-child{
 	border-left: none;}
 h1{
 font-size: 20px;
@@ -132,6 +140,7 @@ padding: 120px 25px 50px 25px;
 }
 
 /*primer dise–o de header*/
+/*
 
 #brand{
 display: block;
@@ -150,20 +159,20 @@ height: 15px;
 left: 410px;
 top:56px;
 }
+*/
 
 /*Segundo dise–o de header descomentar y comentar las anteriores*/
 
-/*
-#brand{
+.cenefa{
 display: block;
 position: absolute;
-left: -23px;
+left: -5px;
 top:20px;
 width: 840px;
-height: 95px;
-background: transparent url(images/header2.png) left top no-repeat;}
+height: 90px;
+background: transparent url(images/sprite.png) left top no-repeat;}
 
-#menu{
+.menu{
 display: block;
 position: absolute;
 width: 370px;
@@ -171,8 +180,8 @@ height: 15px;
 left: 410px;
 top:78px;
 }
-*/
-	#menu a{
+
+	.menu a{
 	display: inline-block;
 	position: relative;
 	padding:0 2px 0 5px;
@@ -182,6 +191,45 @@ margin-bottom: 30px;
 margin-top: 30px;
 clear: both;
 }
+
+h1.title{
+border: none;
+height: 20px;
+background: transparent url(images/sprite.png) -18px -152px no-repeat;}
+
+.project{
+display: block;
+position: relative;
+height: 50px;
+margin-bottom: 10px;
+padding-top: 80px;
+}
+
+	.project .cenefa{
+	background-position:left -175px;
+	height:50px;
+	left:-30px;
+	}
+/*
+	.project .cenefa:hover{
+	background-position:left -286px;
+	height:50px;
+	left:-30px;
+	}
+*/
+	.project.disabled{
+	padding-top: 0px;
+	}
+	.project.disabled .cenefa{
+	background-position:left -233px;
+	}
+	.project .menu{
+	top:48px;
+	left:380px;
+	}
+	.project p:first-child{
+	margin-top: 50px;
+	}
 
 table{
 width: 750px;
@@ -297,7 +345,7 @@ position: relative;
 width: 800px;
 height: 22px;
 margin: 0 auto;
-background: transparent url(images/footer.png) left top no-repeat;
+background: transparent url(images/sprite.png) -1px -356px no-repeat;
 padding-top: 25px;
 }
  
