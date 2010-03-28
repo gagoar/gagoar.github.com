@@ -98,6 +98,11 @@ font-weight: bold;
 color: #0d202e;
 padding-bottom: 15px;
 border-bottom: 2px solid #B54B02;}
+
+h2{
+font-weight: bold;
+}
+
 th{
 border-bottom: 2px solid #04243C;}
 
@@ -136,7 +141,7 @@ display: block;
 position: relative;
 width: 750px;
 margin: 0 auto;
-padding: 120px 25px 50px 25px;
+padding: 120px 25px 10px 25px;
 }
 
 /*primer dise–o de header*/
@@ -192,6 +197,9 @@ margin-top: 30px;
 clear: both;
 }
 
+h2{
+margin: 15px 0;}
+
 h1.title{
 border: none;
 height: 20px;
@@ -200,7 +208,6 @@ background: transparent url(images/sprite.png) -18px -152px no-repeat;}
 .project{
 display: block;
 position: relative;
-height: 50px;
 margin-bottom: 10px;
 padding-top: 80px;
 }
@@ -209,22 +216,17 @@ padding-top: 80px;
 	background-position:left -175px;
 	height:50px;
 	left:-30px;
+	top:0px;
 	}
-/*
-	.project .cenefa:hover{
-	background-position:left -286px;
-	height:50px;
-	left:-30px;
-	}
-*/
 	.project.disabled{
 	padding-top: 0px;
+	height: 50px;
 	}
 	.project.disabled .cenefa{
 	background-position:left -233px;
 	}
 	.project .menu{
-	top:48px;
+	top:28px;
 	left:380px;
 	}
 	.project p:first-child{
