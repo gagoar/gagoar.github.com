@@ -40,6 +40,7 @@ h1{font:400 clamp(4rem,14vw,8.5rem)/.9 var(--gg-display);margin:0;letter-spacing
 .gg-focus{font:400 clamp(1.2rem,2.6vw,1.6rem)/1.4 var(--gg-display);max-width:38rem;margin:0}
 .gg-meta{display:flex;flex-wrap:wrap;gap:.4rem 2rem;margin:1.75rem 0 0;padding:0;list-style:none;font-size:.9375rem;color:var(--gg-ink-2)}
 .gg-meta b{color:var(--gg-ink)}
+.gg-meta a{display:inline-flex;align-items:center;min-height:44px}
 
 section{padding:3rem 0 0}
 h2{font:400 clamp(1.75rem,4vw,2.4rem)/1.1 var(--gg-display);margin:0 0 .5rem;display:flex;align-items:baseline;gap:.75rem}
@@ -55,7 +56,7 @@ h2 .gg-n{font:700 .8125rem var(--gg-ui);letter-spacing:.12em;color:var(--gg-oran
 .gg-item{padding:1.1rem 1.25rem;border-top:1px solid var(--gg-steel);display:grid;gap:.35rem 1.5rem;grid-template-columns:1fr}
 .gg-item:first-child{border-top:0}
 .gg-item h3{font:700 1.0625rem/1.3 var(--gg-ui);margin:0;display:flex;flex-wrap:wrap;gap:.25rem .75rem;align-items:baseline}
-.gg-item h3 a{text-decoration-thickness:2px}
+.gg-item h3 a{text-decoration-thickness:2px;display:inline-flex;align-items:center;min-height:44px;margin-block:-.65rem}
 .gg-tag{font:500 .8125rem var(--gg-ui);color:var(--gg-ink-2);border:1px solid var(--gg-steel);padding:0 .45rem;border-radius:2px;white-space:nowrap}
 .gg-item p{margin:0;color:var(--gg-ink-2);font-size:.9375rem;overflow-wrap:anywhere}
 .gg-stars{font-weight:700;color:var(--gg-orange-ink);font-size:.9375rem;white-space:nowrap}
