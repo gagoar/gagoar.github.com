@@ -9,7 +9,9 @@
 // Description, stars and latest release tag come from the GitHub API. Nothing is typed by hand.
 // Reads public data only. Uses GITHUB_TOKEN when set, to lift the rate limit.
 //
-// Env: OWNER (default gagoar), CATALOG_URL, SHOWCASE_TOPIC (default showcase).
+// Repos with no push for MAX_AGE_DAYS (default 730) drop off the open-source list.
+//
+// Env: OWNER (default gagoar), CATALOG_URL, SHOWCASE_TOPIC (default showcase), MAX_AGE_DAYS.
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -18,6 +20,7 @@ import { fileURLToPath } from 'node:url';
 const OWNER = process.env.OWNER ?? 'gagoar';
 const CATALOG_URL = process.env.CATALOG_URL ?? `https://${OWNER}.github.io/gago-plugins/catalog.json`;
 const SHOWCASE_TOPIC = process.env.SHOWCASE_TOPIC ?? 'showcase';
+const MAX_AGE_DAYS = Number(process.env.MAX_AGE_DAYS ?? 730);
 const check = process.argv.includes('--check');
 const indexPath = join(dirname(fileURLToPath(import.meta.url)), '..', 'index.html');
 
@@ -58,6 +61,7 @@ async function showcase(pluginRepos) {
   const { items } = await gh(`/search/repositories?q=${q}&sort=stars&order=desc&per_page=100`);
   return items
     .filter((r) => !pluginRepos.has(r.full_name.toLowerCase()))
+    .filter((r) => Date.now() - Date.parse(r.pushed_at) < MAX_AGE_DAYS * 86_400_000)
     .map((r) => ({ name: r.name, href: r.homepage || r.html_url, description: r.description ?? '', stars: r.stargazers_count }));
 }
 
